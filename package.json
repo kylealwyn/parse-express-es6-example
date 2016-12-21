@@ -12,8 +12,6 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.14.0",
-    "parse": "^1.9.2",
-    "parse-cloud-express": "^1.2.0",
     "parse-server": "^2.3.1"
   },
   "devDependencies": {
