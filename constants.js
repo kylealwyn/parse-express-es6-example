@@ -1,7 +1,5 @@
-const port = 9000;
-
-const config = {
-  Port: port,
+const Constants = {
+  Port: 9000,
 
   Env: {
     Development: process.env.NODE_ENV === 'development',
@@ -9,15 +7,15 @@ const config = {
   },
 
   // TODO Configure with .env file
-  ParseServerMount: '/parse',
+  ParseServerMount: '/api',
   ParseWebhookMount: '/webhooks',
   ParseConfig: {
-    databaseURI: 'mongodb://localhost:27017/emerald',
-    cloud: `${__dirname}/cloud/main.js`,
-    appId: 'emerald-cloud',
-    masterKey: 'secret-master-key',
-    serverURL: `http://localhost:9000/parse`,
+    databaseURI: process.env.DATABASE_URI || 'mongodb://localhost:27017/emerald',
+    cloud: process.env.CLOUD_CODE_PATH || `${__dirname}/cloud/main.js`,
+    appId: process.env.APP_ID || 'parse-test',
+    masterKey: process.env.MASTER_KEY || 'secret-master-key',
+    serverURL: process.env.SERVER_URL || `http://localhost:9000/api`,
   },
 };
 
-export default config;
+export default Constants;
