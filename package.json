@@ -1,14 +1,19 @@
 {
-  "name": "emerald-app",
+  "name": "parse-express",
+  "private": true,
   "version": "1.0.0",
-  "description": "",
+  "description": "Boilerplate example for an Express app with a Parse Server written in ES6",
   "main": "index.js",
   "scripts": {
     "start": "nodemon",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["parse", "express", "parse-server"],
+  "author": "Kyle Alwyn <kjalwyn@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/kylealwyn/parse-express-es6-example.git"
+  },
   "license": "ISC",
   "dependencies": {
     "express": "^4.14.0",
